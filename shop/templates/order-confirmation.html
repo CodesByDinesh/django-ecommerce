@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation - StyleSplash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="order-confirmation.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script defer src="order-confirmation.js"></script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">StyleSplash</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html" class="active">Order</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="confirmation-message">
+        <h2><ins>Order Confirmation</ins></h2>
+
+        <p>Thank you for your order!</p>
+        <p><strong>Order Number:</strong> #123456</p>
+        <p><strong>Estimated Delivery:</strong> january 30, 2026</p>
+
+        <!-- EMAIL INPUT -->
+        <input 
+            type="email" 
+            id="customerEmail" 
+            placeholder="Enter your email"
+            required
+        >
+
+        <button onclick="sendOrderEmail()">Send Confirmation Email</button>
+
+        <p id="mailStatus"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 StyleSplash. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

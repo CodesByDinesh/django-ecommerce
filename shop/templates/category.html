@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories | StyleSplash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Same CSS as cart.html -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">StyleSplash</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html" class="active">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- CATEGORY BUTTONS -->
+    <section class="category-header">
+        <h2>Select Category</h2>
+
+        <div class="category-buttons">
+            <button onclick="filterProducts('electronics')">Electronics</button>
+            <button onclick="filterProducts('books')">Books</button>
+            <button onclick="filterProducts('fashion')">Fashion</button>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="product-list">
+
+        <!-- Electronics -->
+        <div class="product-item" data-category="electronics">
+            <img src="images/phone.jpg">
+            <h3>Smart Phone</h3>
+            <p>$299</p>
+        </div>
+
+        <div class="product-item" data-category="electronics">
+            <img src="images/laptop.jpg">
+            <h3>Laptop</h3>
+            <p>$799</p>
+        </div>
+
+        <!-- Books -->
+        <div class="product-item" data-category="books">
+            <img src="book1.jpg">
+            <h3>Story Book</h3>
+            <p>$15</p>
+        </div>
+
+        <div class="product-item" data-category="books">
+            <img src="book2.jpg">
+            <h3>Programming Book</h3>
+            <p>$25</p>
+        </div>
+
+        
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 StyleSplash</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    function filterProducts(category) {
+        const products = document.querySelectorAll('.product-item');
+
+        products.forEach(product => {
+            product.style.display =
+                product.dataset.category === category ? 'block' : 'none';
+        });
+    }
+
+    // Load default category
+    filterProducts('electronics');
+</script>
+
+</body>
+</html>

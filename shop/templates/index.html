@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - StyleSplash</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JS -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav>
+    <div class="logo">
+        <a href="{% url 'home' %}">StyleSplash</a>
+    </div>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'shop' %}">Shop</a></li>
+        <li><a href="{% url 'cart' %}">Cart</a></li>
+        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+        <li><a href="{% url 'order_confirmation' %}">Order Confirmation</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <li><a href="{% url 'search' %}">Search</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-banner" style="background-image: url('{% static 'images/homebg.jpg' %}');">
+        <div class="hero-content">
+            <h1>Discover Your Style</h1>
+            <p>Beauty • Fashion • Home Essentials</p>
+            <a href="{% url 'shop' %}" class="hero-btn">Shop Now</a>
+        </div>
+    </section>
+    <!-- TRENDING PRODUCTS -->
+    <section class="product-row">
+        <h2>Trending Now</h2>
+        <div class="row-scroll">
+            <div class="card">
+                <img src="{% static 'images/p1.jpg' %}" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/p2.jpg' %}" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/p3.jpg' %}" alt="Product 3">
+                <p>Product 3</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/p4.jpg' %}" alt="Product 4">
+                <p>Product 4</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/p5.jpg' %}" alt="Product 5">
+                <p>Product 5</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEAUTY PICKS -->
+    <section class="product-row">
+        <h2>Beauty Picks</h2>
+        <div class="row-scroll">
+            <div class="card">
+                <img src="{% static 'images/b1.jpg' %}" alt="Lipstick">
+                <p>Lipstick</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/b2.jpg' %}" alt="Foundation">
+                <p>Foundation</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/b3.jpg' %}" alt="Perfume">
+                <p>Perfume</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/b4.jpg' %}" alt="Serum">
+                <p>Serum</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASHION STORE -->
+    <section class="product-row">
+        <h2>Fashion Store</h2>
+        <div class="row-scroll">
+            <div class="card">
+                <img src="{% static 'images/f1.jpg' %}" alt="Dresses">
+                <p>Dresses</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/f2.jpg' %}" alt="Tops">
+                <p>Tops</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/f3.jpg' %}" alt="Jewelry">
+                <p>Jewelry</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'images/f4.jpg' %}" alt="Bags">
+                <p>Bags</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-section about">
+            <h3>About StyleSplash</h3>
+            <p>Your one-stop online shop for all your needs.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'shop' %}">Shop</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2026 StyleSplash. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>

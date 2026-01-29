@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - StyleSplash{% endblock %}
+
+{% block content %}
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+    <h1>About StyleSplash</h1>
+    <p>
+        StyleSplash is a curated fashion sanctuary for those who treat their wardrobe as a 
+        visual manifesto rather than just a collection of clothes. By blending sharp, architectural 
+        design with a modern, digital-first approach, the brand provides the tools for individuals to 
+        build an identity that feels both intentional and unapologetic.
+    </p>
+</section>
+
+<!-- SHOP DETAILS -->
+<section class="shop-details">
+    <h2>Who We Are</h2>
+    <p>
+        Founded in 2020, StyleSplash started as a digital-first fashion brand
+        with one goal: deliver premium fashion at accessible prices.
+    </p>
+
+    <p>
+        From everyday essentials to statement pieces,
+        every product at StyleSplash is selected with care,
+        quality checks, and customer satisfaction in mind.
+    </p>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+    <h2>Our Core Values</h2>
+    <ul>
+        <li>Customer Satisfaction Above All</li>
+        <li>Quality & Ethical Sourcing</li>
+        <li>Innovation in Fashion</li>
+        <li>Transparency & Trust</li>
+    </ul>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+    <h2>Meet Our Team</h2>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="{% static 'images/founder.jpg' %}" alt="Founder">
+            <h3>John Doe</h3>
+            <p>Founder & Creative Director</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'images/marketing-head.jpg' %}" alt="Marketing Head">
+            <h3>Jane Smith</h3>
+            <p>Head of Marketing</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'images/developer.jpg' %}" alt="Developer">
+            <h3>Alex Brown</h3>
+            <p>Lead Web Developer</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

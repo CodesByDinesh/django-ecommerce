@@ -1,0 +1,290 @@
+/* ================= FONT ================= */
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Baskervville SC", serif;
+    background-color: #f9f9f9;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    background-color: #7ed0cd;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-banner {
+    width: 100%;
+    height: 70vh;
+    background-image: url("homebg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    position: relative;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ================= PRODUCT ROWS ================= */
+.product-row {
+    padding: 30px 6%;
+}
+
+.product-row h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Horizontal scroll */
+.row-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.row-scroll::-webkit-scrollbar {
+    display: none;
+}
+.row-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Product Card */
+.card {
+    min-width: 200px;
+    height: 260px;
+    border-radius: 12px;
+    background: #f1f1f1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 8px;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= FEATURES ================= */
+.features {
+    padding: 40px 6%;
+    background: #f4f4f4;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    margin-bottom: 10px;
+}
+
+.feature-item a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-image: url("footer.jpg");
+    background-size: cover;
+    color: black;
+    padding: 30px 6%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ================= SCROLL TO TOP ================= */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-banner {
+        height: 50vh;
+        padding-left: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        min-width: 160px;
+        height: 220px;
+    }
+
+    .feature-item {
+        flex: 1 1 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+    

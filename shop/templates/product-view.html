@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - StyleSplash</title>
+
+    <link rel="stylesheet" href="product-view.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="product-view.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">StyleSplash</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="category-header">
+        <h2><ins>Product Details</ins></h2>
+        <p>Explore our featured products across categories</p>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="product-container">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-details" data-category="electronics">
+            <div class="product-image">
+                <img src="product1.jpg" alt="Gold Necklace Set">
+            </div>
+            <div class="product-info">
+                <h2>Gold-Plated Necklace Set</h2>
+                <p>
+                    Elegant gold-plated necklace set with matching earrings.
+                    Perfect for special occasions and everyday elegance.
+                </p>
+                <p><strong>Price:</strong> $29.99</p>
+
+                <form action="cart.html">
+                    <label>Quantity:</label>
+                    <input type="number" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-details" data-category="electronics">
+            <div class="product-image">
+                <img src="product2.jpg" alt="Hair Dryer">
+            </div>
+            <div class="product-info">
+                <h2>Professional Ionic Hair Dryer</h2>
+                <p>
+                    Salon-quality hair dryer with diffuser and concentrator.
+                    Smooth, shiny, frizz-free styling.
+                </p>
+                <p><strong>Price:</strong> $49.99</p>
+
+                <form action="cart.html">
+                    <label>Quantity:</label>
+                    <input type="number" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-details" data-category="beauty">
+            <div class="product-image">
+                <img src="product3.jpg" alt="Face Serum">
+            </div>
+            <div class="product-info">
+                <h2>Radiant Glow Face Serum</h2>
+                <p>
+                    Deeply nourishing serum for glowing, youthful skin.
+                    Lightweight, hydrating, and effective.
+                </p>
+                <p><strong>Price:</strong> $39.99</p>
+
+                <form action="cart.html">
+                    <label>Quantity:</label>
+                    <input type="number" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- BOOK 1 -->
+        <div class="product-details" data-category="books">
+            <div class="product-image">
+                <img src="book1.jpg" alt="Book 1">
+            </div>
+            <div class="product-info">
+                <h2>Inspirational Book</h2>
+                <p>
+                    A beautifully written book that motivates and inspires
+                    personal growth and creativity.
+                </p>
+                <p><strong>Price:</strong> $19.99</p>
+
+                <form action="cart.html">
+                    <label>Quantity:</label>
+                    <input type="number" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- BOOK 2 -->
+        <div class="product-details" data-category="books">
+            <div class="product-image">
+                <img src="book2.jpg" alt="Book 2">
+            </div>
+            <div class="product-info">
+                <h2>Creative Design Guide</h2>
+                <p>
+                    A practical guide for designers, artists, and creatives
+                    looking to level up their skills.
+                </p>
+                <p><strong>Price:</strong> $24.99</p>
+
+                <form action="cart.html">
+                    <label>Quantity:</label>
+                    <input type="number" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About StyleSplash</h3>
+            <p>Your one-stop online shop for all your needs.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a><br>
+            <a href="category.html">Shop</a><br>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@eshop.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 StyleSplash. All rights reserved.</p>
+    </div>
+</footer>
+
+<button id="scrollTopBtn">↑</button>
+
+</body>
+</html>

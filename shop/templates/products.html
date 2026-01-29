@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block title %}Shop{% endblock %}
+
+{% block content %}
+<h1>Shop</h1>
+<p>Welcome to our products page.</p>
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - StyleSplash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="products.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="products.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">StyleSplash</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html" class="active">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="shop-layout">
+
+    <!-- ===== FILTER SIDEBAR ===== -->
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <section>
+            <h3>Category</h3>
+            <ul>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Books</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Price Range</h3>
+            <label>Min</label>
+            <input type="number" placeholder="0">
+            <label>Max</label>
+            <input type="number" placeholder="1000">
+            <button>Apply</button>
+        </section>
+    </aside>
+
+    <!-- ===== PRODUCTS AREA ===== -->
+    <section class="products-area">
+
+        <!-- ===== ELECTRONICS ===== -->
+        <h2 class="section-title">Electronics</h2>
+
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="product1.jpg" alt="Necklace Set">
+                <h3>Gold Necklace Set</h3>
+                <p class="desc">
+                    Elegant gold-plated necklace with matching earrings.
+                    Perfect for weddings and festive wear.
+                </p>
+                <p class="price">$29.99</p>
+                <a href="product-view.html">View Details</a>
+            </div>
+
+            <div class="product-item">
+                <img src="product2.jpg" alt="Hair Dryer">
+                <h3>Ionic Hair Dryer</h3>
+                <p class="desc">
+                    Professional hair dryer with diffuser for smooth,
+                    frizz-free styling.
+                </p>
+                <p class="price">$49.99</p>
+                <a href="product-view.html">View Details</a>
+            </div>
+
+            <div class="product-item">
+                <img src="product3.jpg" alt="Face Serum">
+                <h3>Radiant Glow Serum</h3>
+                <p class="desc">
+                    Lightweight face serum that hydrates and restores
+                    natural skin glow.
+                </p>
+                <p class="price">$39.99</p>
+                <a href="product-view.html">View Details</a>
+            </div>
+        </div>
+
+        <!-- ===== BOOKS ===== -->
+        <h2 class="section-title">Books</h2>
+
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="book1.jpg" alt="Inspirational Book">
+                <h3>Inspirational Living</h3>
+                <p class="desc">
+                    A motivational book focused on confidence,
+                    creativity, and personal growth.
+                </p>
+                <p class="price">$19.99</p>
+                <a href="product-view.html">View Details</a>
+            </div>
+
+            <div class="product-item">
+                <img src="book2.jpg" alt="Design Book">
+                <h3>Design Thinking Guide</h3>
+                <p class="desc">
+                    A practical guide for designers and students
+                    to master modern design principles.
+                </p>
+                <p class="price">$24.99</p>
+                <a href="product-view.html">View Details</a>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>About StyleSplash</h3>
+            <p>Your one-stop online shop for fashion, beauty, and books.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a><br>
+            <a href="products.html">Shop</a><br>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 StyleSplash. All rights reserved.</p>
+</footer>
+
+<button id="scrollTopBtn">↑</button>
+
+</body>
+</html>
